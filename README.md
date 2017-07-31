@@ -1,5 +1,6 @@
 # Array of Tuples
-[![Build Status](https://travis-ci.org/dangerozov/fluent-interface-builder.svg?branch=master)](https://travis-ci.org/dangerozov/fluent-interface-builder)
+[![Build Status](https://travis-ci.org/dangerozov/array-of-tuples.svg?branch=master)](https://travis-ci.org/dangerozov/array-of-tuples)
+
 Implementation of [SoA (structure of arrays)](https://en.wikipedia.org/wiki/AOS_and_SOA#Structure_of_arrays).
 Stores every item of Tuple in separate arrays instead of single array.
 
