@@ -21,11 +21,3 @@ array.unshift(0, ..., 7); // length
 array.shift(); // [T1, ..., T8]
 array.indexOf(0, ..., 7, fromIndex?: 0); // -1..*
 ```
-
-### Destructure
-To reduce allocations destructure results of `get`, `pop`, `shift`.
-```
-let [t1, ..., t8] = array.get(0);
-let [t1, ..., t8] = array.pop();
-let [t1, ..., t8] = array.shift();
-```

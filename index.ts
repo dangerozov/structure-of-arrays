@@ -8,6 +8,8 @@ class TupleArray<T extends any[]> {
     public length: number = 0
 
     public get(index: number): T {
+        if (index > this.length) return undefined;
+
         let r = [];
         for (let i = 0; i < this.size; i++) r[i] = this.store[i][index];
         return <T>r;
@@ -15,6 +17,7 @@ class TupleArray<T extends any[]> {
 
     public set(index: number, ...items: any[]): T {
         for (let i = 0; i < this.size; i++) this.store[i][index] = items[i];
+        this.length = index + 1;
         return <T>items;
     }
 
@@ -48,12 +51,17 @@ class TupleArray<T extends any[]> {
         let args = [t1, t2, t3, t4, t5, t6, t7, t8, fromIndex];
         fromIndex = args[this.size];
 
-        let firstIndex = this.store[0].indexOf(args[0], fromIndex);
-        if (firstIndex === -1) return firstIndex;
+        let firstIndex;
+        for (firstIndex = this.store[0].indexOf(args[0], fromIndex);
+            firstIndex > -1;
+            firstIndex = this.store[0].indexOf(args[0], firstIndex + 1)) {
 
-        for (let i = 1; i < this.size; i++) {
-            let nextIndex = this.store[i].indexOf(args[i], firstIndex);
-            if (nextIndex !== firstIndex) return -1;
+                let found = true;
+                for (let i = 1; i < this.size && found; i++) {
+                    let nextIndex = this.store[i].indexOf(args[i], firstIndex);
+                    found = found && nextIndex === firstIndex;
+                }
+                if (found === true) break;
         }
 
         return firstIndex;

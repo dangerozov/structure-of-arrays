@@ -3,7 +3,7 @@
 		"module": "commonjs",
 		"noImplicitAny": true,
 		"declaration": true,
-		"target": "es5"
+		"target": "esnext"
 	},
 	"exclude": [
 		"node_modules/"

@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "test"
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "install": "typings install"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
   },
   "homepage": "https://github.com/dangerozov/array-of-tuples#readme",
   "devDependencies": {
-    "typescript": "^2.3.2"
+    "jasmine": "^2.7.0",
+    "typescript": "^2.4.2",
+    "typings": "^2.1.1"
   }
 }
