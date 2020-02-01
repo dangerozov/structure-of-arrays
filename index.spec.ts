@@ -1,10 +1,10 @@
 import tupleArray = require('./index');
 
 describe('Array of Tuples', () => {
-    let array: tupleArray.TupleArray3<number, number, number>;
+    let array: tupleArray<[number, number, number]>;
 
     beforeEach(() => {
-        array = tupleArray.create<number, number, number>(3);
+        array = tupleArray.create3<number, number, number>();
     });
 
     it('should increment and decrement length', () => {

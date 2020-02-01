@@ -29,7 +29,8 @@
   "homepage": "https://github.com/dangerozov/array-of-tuples#readme",
   "devDependencies": {
     "jasmine": "^2.7.0",
-    "typescript": "^2.4.2",
+    "typescript": "^3.7.5",
     "typings": "^2.1.1"
-  }
+  },
+  "dependencies": {}
 }
