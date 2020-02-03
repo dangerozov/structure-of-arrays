@@ -1,5 +1,5 @@
 # Structure of Arrays
-[![Build Status](https://travis-ci.org/dangerozov/array-of-tuples.svg?branch=master)](https://travis-ci.org/dangerozov/array-of-tuples)
+[![Build Status](https://travis-ci.org/dangerozov/structure-of-arrays.svg?branch=master)](https://travis-ci.org/dangerozov/structure-of-arrays)
 
 Implementation of [SoA (structure of arrays)](https://en.wikipedia.org/wiki/AOS_and_SOA#Structure_of_arrays).
 
