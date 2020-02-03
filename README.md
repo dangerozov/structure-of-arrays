@@ -5,20 +5,20 @@ Implementation of [SoA (structure of arrays)](https://en.wikipedia.org/wiki/AOS_
 
 ## Usage
 ```
-let tupleArray = require('array-of-tuples');
+let soa = require('structure-of-arrays');
 ```
-Use `create<T1, ..., T8>(size: 1..8)` method to create array of tuples. Up to 8 generic parameters are available.
+Use `soa.create2<T1, T2> .. soa.create8<T1, .., T8>()` method to create. Up to 8 generic parameters are available.
 ```
-let array = tupleArray.create<T1, ..., T8>(1..8);
+let array = soa.create8<T1, .., T8>();
 ```
-`length`, `get`, `set`, `push`, `pop`, `unshift`, `shift`, `indexOf` are currently available.
+`length`, `get`, `set`, `push`, `pop`, `unshift`, `shift`, `indexOf` are available.
 ```
 array.length; // 0..*
-array.get(index: 0); // [T1, ..., T8]
-array.set(index: 0, 0, ..., 7); // [T1, ..., T8]
-array.push(0, ..., 7); // length
-array.pop(); // [T1, ..., T8]
-array.unshift(0, ..., 7); // length
-array.shift(); // [T1, ..., T8]
-array.indexOf(0, ..., 7, fromIndex?: 0); // -1..*
+array.get(index: 0); // [T1, .., T8]
+array.set(index: 0, 0, .., 7); // [T1, .., T8]
+array.push(0, .., 7); // length
+array.pop(); // [T1, .., T8]
+array.unshift(0, .., 7); // length
+array.shift(); // [T1, .., T8]
+array.indexOf(0, .., 7, fromIndex?: 0); // -1..*
 ```

@@ -1,10 +1,10 @@
-import tupleArray = require('./index');
+import soa = require('./index');
 
-describe('Array of Tuples', () => {
-    let array: tupleArray<[number, number, number]>;
+describe('Structure of Arrays', () => {
+    let array: soa<[number, number, number]>;
 
     beforeEach(() => {
-        array = tupleArray.create3<number, number, number>();
+        array = soa.create3<number, number, number>();
     });
 
     it('should increment and decrement length', () => {
