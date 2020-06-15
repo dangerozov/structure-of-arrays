@@ -1,16 +1,16 @@
 {
+  "type": "module",
   "name": "structure-of-arrays",
   "version": "3.0.0",
   "description": "Implementation of SoA (structure of arrays)",
-  "main": "index.js",
+  "main": "dist/index.js",
   "files": [
-    "index.js",
-    "index.d.ts"
+    "dist/index.js",
+    "dist/index.d.ts"
   ],
   "scripts": {
     "build": "tsc",
-    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
-    "install": "typings install"
+    "test": "cross-env TS_NODE_PROJECT=tsconfig.test.json mocha --require ts-node/register ./*.test.ts"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,13 @@
   },
   "homepage": "https://github.com/dangerozov/structure-of-arrays#readme",
   "devDependencies": {
-    "jasmine": "^2.7.0",
-    "typescript": "^3.7.5",
-    "typings": "^2.1.1"
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.2",
+    "mocha": "^8.0.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
   },
   "dependencies": {}
 }

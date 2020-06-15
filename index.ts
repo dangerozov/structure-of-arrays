@@ -1,4 +1,4 @@
-export = class TupleArray<T extends any[]> {
+export class TupleArray<T extends any[]> {
     public static create2<T1, T2>() { return new TupleArray<[T1, T2]>(2); }
     public static create3<T1, T2, T3>() { return new TupleArray<[T1, T2, T3]>(3); }
     public static create4<T1, T2, T3, T4>() { return new TupleArray<[T1, T2, T3, T4]>(4); }
